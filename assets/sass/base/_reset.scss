@@ -1,11 +1,30 @@
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
   height: auto;
+}
+
+//? h1 => h6
+@for $i from 1 through 6 {
+  @if ($i <= 3) {
+    h#{$i} {
+      line-height: 1.1;
+
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+p {
+  margin: 0 0 10px;
 }

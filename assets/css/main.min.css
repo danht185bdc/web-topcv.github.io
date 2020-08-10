@@ -1,12 +1,18 @@
 *,::after,::before{margin:0;padding:0;border:none;box-sizing:inherit}
 html{font-family:Arial,Helvetica,sans-serif;font-size:62.5%;line-height:1.25;box-sizing:border-box}
-body{font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;font-weight:400;color:#333;text-align:initial}
+body{font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;font-weight:400;color:#333}
 li{list-style:none}
 a{text-decoration:none;color:inherit}
-img{width:100%;height:auto}
-.btn{cursor:pointer;display:inline-block;padding:6px 12px;border:1px solid transparent;font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;font-weight:400;color:#333;text-align:center;white-space:nowrap;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}
+img{display:block;max-width:100%;height:auto}
+h1{line-height:1.1;margin-top:20px;margin-bottom:10px}
+h2{line-height:1.1;margin-top:20px;margin-bottom:10px}
+h3{line-height:1.1;margin-top:20px;margin-bottom:10px}
+p{margin:0 0 10px}
+.btn{cursor:pointer;display:inline-block;padding:6px 12px;border:1px solid transparent;font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;font-weight:400;color:#333;text-align:center;white-space:nowrap;line-height:1.5;border-radius:.5rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}
 .btn--green{background-color:#0ba25e}
 .btn--green:hover{background-color:#1a8a58}
+.btn--yellow{background-color:#f1c40e}
+.btn--yellow:hover{background-color:#e2b400}
 .btn--rounded{border-radius:5rem}
 .navbar{padding:20px 0;font-family:Arial,Helvetica,sans-serif}
 .navbar__brand{display:flex;flex-wrap:wrap;flex-direction:initial;justify-content:center;align-items:center;padding:15px}
@@ -26,3 +32,18 @@ img{width:100%;height:auto}
 @media (max-width:739px){
 .hide-on-mobile{display:none}
 }
+header .banner{padding:10px}
+header .banner__heading{padding-top:20px}
+header .banner__heading h1{font-family:Arial,Helvetica,sans-serif;font-size:4.4rem;font-weight:700;color:#0ba25e}
+header .banner__heading h3{font-family:Arial,Helvetica,sans-serif;font-size:2.2rem;font-weight:600;color:#0ba25e}
+header .banner__heading p{margin-top:20px;font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;font-weight:600;color:#000}
+header .banner__heading .btn-custom{width:200px;margin:20px;margin-left:0;padding:10px 20px;font-family:Arial,Helvetica,sans-serif;font-size:2rem;font-weight:700;color:#fff}
+header .banner__img{padding-top:10px;max-width:75%}
+header #search-job h2{font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;font-weight:700;color:#0ba25e}
+header #search-job .form-group{position:relative;margin-bottom:12px}
+header #search-job .form-group>i{position:absolute;left:30px;top:50%;transform:translateY(-55%);color:#555}
+header #search-job .form-group .input-search{width:100%;height:44px;padding:6px 12px;padding-left:50px;border:1px solid #ccc;border-radius:.5rem;font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;font-weight:400;color:#555}
+header #search-job .form-group .input-search:focus{outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}
+header #search-job .btn-custom{width:100%;height:44px;margin-bottom:12px;font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;font-weight:700;color:#fff;padding:10px 15px}
+header #search-job .btn-custom i{margin-right:10px}
+header #search-job .btn-custom:focus{outline:5px auto #1a8a58;outline-offset:-2px}
