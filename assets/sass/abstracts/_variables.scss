@@ -11,9 +11,13 @@ $font: (
 
 //! COLOR
 $color: (
+  mode: (
+    light: #f5f8fa,
+  ),
   text: (
     base: #333,
     light: #555,
+    silver: #999,
   ),
   white: (
     base: #fff,
@@ -21,6 +25,7 @@ $color: (
   black: (
     base: #000,
     light: #ccc,
+    dark: #666,
   ),
   green: (
     base: #0ba25e,

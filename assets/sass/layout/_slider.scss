@@ -1,0 +1,66 @@
+.slider {
+  margin-bottom: 10px;
+  padding: 20px 0;
+
+  //? .slider__initialized
+  &__initialized {
+    position: relative;
+    min-height: 240px;
+  }
+
+  //? .slider__slick
+  &__slick {
+    position: absolute;
+
+    //? .slider__slick-arrow
+    &-arrow {
+      // FIXME: Chưa hoàn thành xong phần nút
+    }
+  }
+
+  //? .slider__company
+  &__company {
+    position: relative;
+    display: block;
+    height: 240px;
+
+    border-radius: 1rem;
+    overflow: hidden;
+
+    //? .slider__company-img
+    &-img {
+      position: absolute;
+      width: 100%;
+
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__click {
+    $size-icon: 20;
+
+    position: absolute;
+    bottom: -(($size-icon * 1px) + ($size-icon / 6) * 1px);
+
+    width: 100%;
+    @include flexBox();
+
+    .icon {
+      width: $size-icon * 1px;
+      margin: 0 10px;
+
+      cursor: pointer;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

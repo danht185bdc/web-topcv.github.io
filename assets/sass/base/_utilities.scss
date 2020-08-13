@@ -1,0 +1,12 @@
+.showing {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.light-mode {
+  background-color: getColor(mode, light);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

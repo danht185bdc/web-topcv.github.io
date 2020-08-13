@@ -1,0 +1,17 @@
+.text_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-dark-gray {
+  color: getColor(black, dark);
+}
+
+.text-highlight {
+  color: getColor(green, base);
+}
+
+.text-silver {
+  color: getColor(text, silver);
+}

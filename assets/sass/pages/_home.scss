@@ -116,3 +116,22 @@ header {
     }
   }
 }
+
+#best-jobs {
+  padding: 20px 0;
+
+  .feature-jobs {
+    margin-bottom: 30px;
+  }
+
+  ul {
+    position: absolute;
+    bottom: -25px;
+
+    padding-bottom: 5px;
+    width: 100%;
+    height: 30px;
+
+    background-color: getColor(white, base);
+  }
+}

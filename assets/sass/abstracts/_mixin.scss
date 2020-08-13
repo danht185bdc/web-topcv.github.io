@@ -29,8 +29,8 @@
 }
 
 @mixin square($size, $circle: false) {
-  width: $size;
-  height: $size;
+  width: $size * 1px;
+  height: $size * 1px;
 
   @if ($circle == true) {
     border-radius: 50%;

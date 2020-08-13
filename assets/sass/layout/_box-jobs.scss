@@ -1,0 +1,114 @@
+.box-jobs {
+  $size-h2: 18;
+  $size-icon: 26;
+
+  position: relative;
+  background-color: getColor(white, base);
+
+  //* .box-jobs > h2
+  > h2 {
+    margin: auto;
+    padding: 15px;
+
+    @include setFont($font-weight: 500, $colorName: white);
+    font-size: ($size-h2/10) * 1rem;
+
+    background-color: getColor(green, base);
+
+    //* .box-jobs > h2 .icon
+    .icon {
+      color: getColor(yellow, base);
+      font-size: ($size-icon/10) * 1rem;
+      margin-right: 10px;
+    }
+
+    //* .box-jobs > h2 span
+    span {
+      float: right;
+      font-size: getFontSize(small);
+      line-height: 26px;
+
+      &:hover {
+        color: rgba($color: getColor(white, base), $alpha: 0.7);
+      }
+    }
+  }
+
+  //? .box-jobs .feature-jobs
+  .feature-jobs {
+    position: relative;
+    padding-bottom: 5px;
+    min-height: 520px;
+
+    //? .box-jobs .feature-jobs__list-table
+    &__list-table {
+      position: relative;
+    }
+    //? .box-jobs .feature-jobs__table-item
+    &__table-item {
+      position: absolute;
+      width: 100%;
+      min-height: 520px;
+
+      padding: 5px 20px;
+    }
+
+    //? .box-jobs .feature-jobs feature-job
+    .feature-job {
+      padding: 0 5px;
+
+      //? .box-jobs .feature-jobs feature-job-item
+      &-item {
+        margin: 5px 0;
+        padding: 5px;
+        border: 1px solid hsla(0, 0%, 93%, 0.8);
+        border-radius: 2px;
+
+        &:hover {
+          background-color: getColor(mode, light);
+        }
+
+        .col-logo {
+          padding-right: 0;
+
+          .box-company-logo {
+            @include square(60);
+            overflow: hidden;
+            @include flexBox();
+          }
+        }
+        .col-title {
+          %title {
+            content: attr(title);
+          }
+
+          padding-left: 0;
+          font-size: getFontSize(small);
+
+          .title-text {
+            margin-bottom: 3px;
+
+            b::before {
+              @extend %title;
+            }
+          }
+          .company span::before {
+            @extend %title;
+          }
+
+          .salary,
+          .address {
+            padding-top: 5px;
+
+            i {
+              margin-right: 5px;
+            }
+          }
+          .address::before {
+            @extend %title;
+          }
+        }
+      }
+    }
+  }
+}

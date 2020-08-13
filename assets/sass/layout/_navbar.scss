@@ -20,12 +20,47 @@
 
     //? .navbar__list-item
     &-item {
+      position: relative;
       display: block;
+
+      &:hover:before {
+        opacity: 1;
+        transform: scale(1);
+        transition: 0.4s;
+      }
+      &::before {
+        content: "";
+
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        bottom: 20px;
+        height: 2px;
+        background-color: getColor(green, dark);
+
+        transform: scale(0);
+        opacity: 0;
+        transition: 0.2s;
+      }
     }
 
     //? .navbar__list-link
     &-link {
+      display: block;
       padding: 25px 15px;
+      text-align: center;
+
+      transition: 0.2s;
+      &:hover {
+        color: getColor(green, base);
+        transform: translateY(-10px);
+        transition: 0.2s;
+      }
+    }
+
+    //? .navbar__list .btn-custom
+    .btn-custom {
+      margin-left: 10px;
     }
   }
 
