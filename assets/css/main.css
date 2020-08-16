@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -32,7 +33,7 @@ a {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -177,7 +178,7 @@ p {
   transition: 0.2s;
 }
 .navbar__list .btn-custom {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .navbar__button {
   padding-left: 14px;
@@ -236,7 +237,7 @@ p {
   cursor: pointer;
   opacity: 0.5;
 }
-.slider__click .icon:hover {
+.slider__click .icon:hover, .slider__click .icon.active {
   opacity: 1;
 }
 
@@ -263,6 +264,7 @@ p {
   float: right;
   font-size: 1.4rem;
   line-height: 26px;
+  text-transform: none;
 }
 .box-jobs > h2 span:hover {
   color: rgba(255, 255, 255, 0.7);
@@ -270,7 +272,7 @@ p {
 .box-jobs .feature-jobs {
   position: relative;
   padding-bottom: 5px;
-  min-height: 520px;
+  min-height: 510px;
 }
 .box-jobs .feature-jobs__list-table {
   position: relative;
@@ -278,7 +280,7 @@ p {
 .box-jobs .feature-jobs__table-item {
   position: absolute;
   width: 100%;
-  min-height: 520px;
+  min-height: 510px;
   padding: 5px 20px;
 }
 .box-jobs .feature-jobs .feature-job {
@@ -296,7 +298,14 @@ p {
 .box-jobs .feature-jobs .feature-job-item .col-logo {
   padding-right: 0;
 }
-.box-jobs .feature-jobs .feature-job-item .col-logo .box-company-logo {
+.box-jobs .feature-jobs .feature-job-item .col-title {
+  padding-left: 0;
+  font-size: 1.4rem;
+}
+.box-jobs .feature-jobs .feature-job-item .title-text b::before, .box-jobs .feature-jobs .feature-job-item .company span::before, .box-jobs .feature-jobs .feature-job-item .address::before {
+  content: attr(title);
+}
+.box-jobs .feature-jobs .feature-job-item .box-company-logo {
   width: 60px;
   height: 60px;
   border-radius: 0.5rem;
@@ -307,22 +316,15 @@ p {
   justify-content: "center";
   align-items: "center";
 }
-.box-jobs .feature-jobs .feature-job-item .col-title {
-  padding-left: 0;
-  font-size: 1.4rem;
-}
-.box-jobs .feature-jobs .feature-job-item .col-title .title-text b::before, .box-jobs .feature-jobs .feature-job-item .col-title .company span::before, .box-jobs .feature-jobs .feature-job-item .col-title .address::before {
-  content: attr(title);
-}
-.box-jobs .feature-jobs .feature-job-item .col-title .title-text {
+.box-jobs .feature-jobs .feature-job-item .title-text {
   margin-bottom: 3px;
 }
-.box-jobs .feature-jobs .feature-job-item .col-title .salary,
-.box-jobs .feature-jobs .feature-job-item .col-title .address {
+.box-jobs .feature-jobs .feature-job-item .salary,
+.box-jobs .feature-jobs .feature-job-item .address {
   padding-top: 5px;
 }
-.box-jobs .feature-jobs .feature-job-item .col-title .salary i,
-.box-jobs .feature-jobs .feature-job-item .col-title .address i {
+.box-jobs .feature-jobs .feature-job-item .salary i,
+.box-jobs .feature-jobs .feature-job-item .address i {
   margin-right: 5px;
 }
 
@@ -437,11 +439,64 @@ header #search-job .btn-custom:focus {
 #best-jobs .feature-jobs {
   margin-bottom: 30px;
 }
-#best-jobs ul {
+#best-jobs .slick-dots {
   position: absolute;
   bottom: -25px;
   padding-bottom: 5px;
   width: 100%;
   height: 30px;
   background-color: #fff;
+  text-align: center;
+}
+#best-jobs .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+}
+#best-jobs .slick-dots li button {
+  position: relative;
+  display: block;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  color: transparent;
+  background: transparent;
+  font-size: 0;
+}
+#best-jobs .slick-dots li button:hover:before {
+  opacity: 0.75;
+}
+#best-jobs .slick-dots li button::before {
+  content: "•";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 40px;
+  line-height: 40px;
+  opacity: 0.25;
+}
+#best-jobs .slick-dots li.slick-active button::before {
+  opacity: 0.75;
+}
+
+#box-center-banner {
+  padding-bottom: 20px;
+}
+
+#interesting-jobs {
+  margin-bottom: 25px;
+}
+#interesting-jobs .feature-jobs {
+  overflow-y: auto;
+  min-height: 585px;
 }

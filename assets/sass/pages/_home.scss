@@ -124,14 +124,73 @@ header {
     margin-bottom: 30px;
   }
 
-  ul {
+  .slick-dots {
+    $hinhVuong: 20;
+
     position: absolute;
     bottom: -25px;
-
     padding-bottom: 5px;
     width: 100%;
     height: 30px;
 
     background-color: getColor(white, base);
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 5px;
+      @include square($hinhVuong);
+
+      button {
+        position: relative;
+
+        display: block;
+        padding: 5px;
+        @include square($hinhVuong);
+        outline: none;
+
+        cursor: pointer;
+        color: transparent;
+        background: transparent;
+        font-size: 0;
+
+        &:hover:before {
+          opacity: 0.75;
+        }
+        &::before {
+          $size-btn: 40 * 1px;
+
+          content: "•";
+          // content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          @include square($hinhVuong);
+
+          // margin-top: 5px;
+          margin-bottom: 15px;
+          color: getColor(black, base);
+          font-size: $size-btn;
+          line-height: $size-btn;
+          opacity: 0.25;
+        }
+      }
+      &.slick-active button::before {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+#box-center-banner {
+  padding-bottom: 20px;
+}
+
+#interesting-jobs {
+  margin-bottom: 25px;
+
+  .feature-jobs {
+    overflow-y: auto;
+    min-height: 585px;
   }
 }
